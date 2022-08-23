@@ -12,7 +12,7 @@ void buscarElemento();
 //--------------------------
 
 
-const int MAX = 2;;
+const int MAX = 2;
 int lista[MAX]{};
 int nElementos = 0;
 
@@ -25,7 +25,7 @@ int main()
 void menu()
 {
 	int op = 0;
-	while (op != 7) {
+	while (op != 6) {
 		system("cls"); // somente no windows
 		cout << "Menu Lista Linear";
 		cout << endl << endl;
@@ -103,5 +103,20 @@ void inserirElemento()
 
 void buscarElemento()
 {
-
+	int num = 0;
+	int busca = -1;
+	cout << "Digite o número: ";
+	cin >> num;
+	for (int n = 0; n < nElementos; n++) {
+		if (num == lista[n])
+		{
+			busca = n;
+		}
+	}
+	if (busca != -1) {
+		cout << "A posição é: " << busca << endl;
+	}
+	else {
+		cout << "Elemento não encontrado"<< endl;
+	}
 }
